@@ -1,0 +1,13 @@
+.hidden {
+    display: block;
+}
+.superHost {
+    border: 1px solid;
+    border-radius: 10px;
+    border-color: black;
+    font-weight: 800;
+    padding: 6px 7px;
+    margin-right: 0.75rem;
+    font-size: 0.75rem;
+    color: rgb(31 41 55 / var(--tw-text-opacity));
+}
