@@ -2,14 +2,14 @@ import React from 'react'
 import Guests from './components/Guests'
 import Locations from './components/Locations'
 
-export default function Modal() {
+export default function Modal({toggleModal}) {
     return (
         <>
             <div className='fixed w-full h-screen'>
                 <div className=' p-3 sm:py-5 sm:px-10 fixed bg-gray-50 w-full h-5/6 sm:h-3/4'>
-                    <div className='flex justify-between'>
+                    <div className='flex justify-between items-center'>
                         <h1 className='font-bold'>Edit your search</h1>
-                        <img src='/public/icons/mark.svg' width={21} />
+                        <button onClick={toggleModal} className='text-4xl pb-1'>&times;</button>
                     </div>
 
                     <div className='flex flex-col justify-center mt-3  sm:mt-10 barra_busqueda'>
