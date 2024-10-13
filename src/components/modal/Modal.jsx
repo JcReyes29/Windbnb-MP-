@@ -2,10 +2,10 @@ import React from 'react'
 import Guests from './components/Guests'
 import Locations from './components/Locations'
 
-export default function Modal({toggleModal}) {
+export default function Modal({toggleModal,className}) {
     return (
         <>
-            <div className='fixed w-full h-screen'>
+            <div className={`fixed w-full h-screen ${className}`}>
                 <div className=' p-3 sm:py-5 sm:px-10 fixed bg-gray-50 w-full h-5/6 sm:h-3/4'>
                     <div className='flex justify-between items-center'>
                         <h1 className='font-bold'>Edit your search</h1>

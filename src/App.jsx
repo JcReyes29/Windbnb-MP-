@@ -13,13 +13,14 @@ function App() {
 
   return (
     <>
-      {view &&
-        <Modal toggleModal={toggleModal} />
+      {
+        <Modal toggleModal={toggleModal} 
+        className={`${!view && 'hidden'}`}/>
       }
       <div className='container px-4 py-5 mx-auto sm:px-7'>
         <header className='sm:flex sm:justify-between sm:items-center'>
           <img src='/icons/logo.beef9462.svg' alt='logo pagina' />
-          {!view &&
+          {
             <Search toggleModal={toggleModal} />
           }
         </header>
