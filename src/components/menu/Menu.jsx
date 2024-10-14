@@ -5,7 +5,7 @@ import axios from 'axios'
 export default function Menu({ dataUpdate }) {
     const [photos, setPhotos] = useState([])
     useEffect(() => {
-        axios.get('/public/api/api.json')
+        axios.get('/public/api.json')
             .then(response => {
                 setPhotos(response.data)
             })

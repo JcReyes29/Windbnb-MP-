@@ -1,4 +1,4 @@
-
+import lupa from '/public/icons/lupa.svg'
 
 function Search({toggleModal}) {
     return (
@@ -7,7 +7,7 @@ function Search({toggleModal}) {
                 <button onClick={toggleModal} className="py-4 px-2 rounded-l-2xl border">Whole, Finland</button>
                 <button onClick={toggleModal} className="py-4 px-2 text-gray-400 border">Add guests</button>
                 <button onClick={toggleModal} className="px-4 py-4 rounded-r-2xl border">
-                    <img src="/public/icons/lupa.svg" alt="lupa" width={21} />
+                    <img src={lupa} alt="lupa" width={21} />
 
                 </button>
             </div>

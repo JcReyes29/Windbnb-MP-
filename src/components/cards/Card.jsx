@@ -1,6 +1,6 @@
 import React from 'react'
 import './Card.css'
-
+import star from '/public/icons/star.svg'
 export default function Card({ todo: { photo, title, rating, type, beds, superHost } }) {
     return (
         <div>
@@ -13,7 +13,7 @@ export default function Card({ todo: { photo, title, rating, type, beds, superHo
                     <span className='font-medium text-gray-500'>{type}. {beds} beds</span>
                 </div>
                 <div className='flex items-center gap-3'>
-                    <img src='/public/icons/star.svg' alt='star image' width={21} />
+                    <img src={star} alt='star image' width={21} />
                     <span>{rating}</span>
                 </div>
             </div>
