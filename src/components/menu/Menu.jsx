@@ -9,7 +9,7 @@ export default function Menu() {
             .then(response => {
                 setPhotos(response.data)
             })
-    })
+    },[])
     
     return (
         <div className='grid grid-col-1 sm:grid-cols-2 md:grid-cols-3 gap-y-8 sm:gap-5 lg:gap-10'>

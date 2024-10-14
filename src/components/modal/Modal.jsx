@@ -20,7 +20,7 @@ export default function Modal({toggleModal,className}) {
 
                                 {/* Boton de busqueda escondido */}
                                 <div className='hidden sm:block w-full'>
-                                    <button className='border px-7 py-2 rounded-r-2xl bg-red-400 flex items-center gap-2 text-white font-bold h-full w-full'>
+                                    <button onClick={toggleModal} className='border px-7 py-2 rounded-r-2xl bg-red-400 flex items-center gap-2 text-white font-bold h-full w-full'>
                                         <img src='/public/icons/lupawhite.svg' width={21} alt='' />
                                         <span>Search</span>
                                     </button>
@@ -32,7 +32,7 @@ export default function Modal({toggleModal,className}) {
 
                         {/* Boton de busqueda */}
                         <div className='mt-80 justify-center flex sm:hidden'>
-                            <button className='border px-7 py-2 rounded-2xl bg-red-400 flex items-center gap-2 text-white font-bold '>
+                            <button onClick={toggleModal} className='border px-7 py-2 rounded-2xl bg-red-400 flex items-center gap-2 text-white font-bold '>
                                 <img src='/public/icons/lupawhite.svg' width={21} alt='' />
                                 <span>Search</span>
                             </button>
