@@ -8,9 +8,12 @@ export default function Menu({ dataUpdate }) {
     useEffect(() => {
         axios.get('/public/api/stays.json')
             .then(response => {
-                setPhotos(response.data)
+                setPhotos(response.data);
             })
-    }, [])
+            .catch((mistake) => {
+                console.log('error, revisar los datos: '+ mistake);
+            })
+    }, []);
 
     const clasificacion = photos.filter(el => {
         const lugar = dataUpdate.lugar.trim() !== '';

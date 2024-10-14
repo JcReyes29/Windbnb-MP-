@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import City from './components/City'
+import lupawhite from '/public/icons/lupawhite.svg'
 
 export default function Modal({ toggleModal, className, searchData }) {
     const [locationSelect, setLocationSelect] = useState('Whole, Finland');
@@ -100,8 +101,8 @@ export default function Modal({ toggleModal, className, searchData }) {
 
                         {/* Boton de busqueda */}
                         <div className='mt-80 justify-center flex sm:hidden'>
-                            <button onClick={(toggleModal, searchDataButton)}className='border px-7 py-2 rounded-2xl bg-red-400 flex items-center gap-2 text-white font-bold '>
-                                <img src='/public/icons/lupawhite.svg' width={21} alt='' />
+                            <button onClick={(toggleModal, searchDataButton)} className='border px-7 py-2 rounded-2xl bg-red-400 flex items-center gap-2 text-white font-bold '>
+                                <img src={lupawhite} width={21} alt='' />
                                 <span>Search</span>
                             </button>
                         </div>
