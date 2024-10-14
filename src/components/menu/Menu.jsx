@@ -11,8 +11,8 @@ export default function Menu({ dataUpdate }) {
                 setPhotos(response.data);
             })
             .catch((mistake) => {
-                console.log('error, revisar los datos: '+ mistake);
-            })
+                console.error('error, revisar los datos: ', mistake);
+            });
     }, []);
 
     const clasificacion = photos.filter(el => {
