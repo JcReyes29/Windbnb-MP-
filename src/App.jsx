@@ -6,12 +6,11 @@ import Modal from './components/modal/Modal'
 
 function App() {
   const [view, setView] = useState(false) //Estado para el Modal
-  const [dataUpdate, setDataUpdate] = ({ lugar: '', huespedes: 0 }); // Datos de ciudad y huespedes actualizados
+  const [dataUpdate, setDataUpdate] = useState({ lugar: '', huespedes: 0 }); // Datos de ciudad y huespedes actualizados
 
-  const handleSearch = (update) => {
+  const searchData = (update) => {
     setDataUpdate(update);
-  }
-
+  } // Funcion para actualizar datos
 
   function toggleModal() {
     setView(!view) // Funcion para mostrar el Modal
@@ -20,7 +19,7 @@ function App() {
   return (
     <>
       {
-        <Modal toggleModal={toggleModal}
+        <Modal searchData={searchData} toggleModal={toggleModal}
           className={`${!view && 'hidden'}`} />
       }
       <div className='container px-4 py-5 mx-auto sm:px-7'>
@@ -35,7 +34,7 @@ function App() {
             <h1 className='text-2xl font-bold'>Stays in Finland</h1>
             <span className='font-medium'>2 stays</span>
           </div>
-          <Menu />
+          <Menu dataUpdate={dataUpdate} />
 
         </section>
 
