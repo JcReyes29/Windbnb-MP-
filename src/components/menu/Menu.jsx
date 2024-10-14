@@ -2,10 +2,11 @@ import React, { useEffect, useState } from 'react'
 import Card from '../cards/Card'
 import axios from 'axios'
 
+
 export default function Menu({ dataUpdate }) {
     const [photos, setPhotos] = useState([])
     useEffect(() => {
-        axios.get('/public/api.json')
+        axios.get("/src/components/api/api.json")
             .then(response => {
                 setPhotos(response.data)
             })
