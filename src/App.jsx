@@ -6,6 +6,12 @@ import Modal from './components/modal/Modal'
 
 function App() {
   const [view, setView] = useState(false) //Estado para el Modal
+  const [dataUpdate, setDataUpdate] = ({ lugar: '', huespedes: 0 }); // Datos de ciudad y huespedes actualizados
+
+  const handleSearch = (update) => {
+    setDataUpdate(update);
+  }
+
 
   function toggleModal() {
     setView(!view) // Funcion para mostrar el Modal
@@ -14,8 +20,8 @@ function App() {
   return (
     <>
       {
-        <Modal toggleModal={toggleModal} 
-        className={`${!view && 'hidden'}`}/>
+        <Modal toggleModal={toggleModal}
+          className={`${!view && 'hidden'}`} />
       }
       <div className='container px-4 py-5 mx-auto sm:px-7'>
         <header className='sm:flex sm:justify-between sm:items-center'>
